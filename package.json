@@ -1,0 +1,26 @@
+{
+  "name": "renvault-staking",
+  "version": "1.0.2",
+  "description": "Staking rewards system for RenVault protocol",
+  "main": "stakingAPI.js",
+  "scripts": {
+    "start": "node stakingAPI.js"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "keywords": [
+    "stacks",
+    "bitcoin",
+    "defi",
+    "clarity",
+    "renvault"
+  ],
+  "author": "RenVault Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sanmipaul/renvault-staking.git"
+  },
+  "homepage": "https://github.com/sanmipaul/renvault-staking#readme"
+}
