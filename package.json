@@ -1,22 +1,39 @@
 {
   "name": "renvault-staking",
-  "version": "1.0.2",
-  "description": "Staking rewards system for RenVault protocol",
-  "main": "stakingAPI.js",
-  "scripts": {
-    "start": "node stakingAPI.js"
+  "version": "1.1.0",
+  "description": "TypeScript staking rewards SDK for the RenVault protocol on Stacks blockchain",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
   },
-  "dependencies": {
-    "express": "^4.18.0",
-    "renvault-bridge": "^1.0.2",
-    "renvault-security-audit": "^1.0.2"
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "prepublishOnly": "npm run typecheck && npm run test && npm run build"
   },
   "keywords": [
     "stacks",
     "bitcoin",
     "defi",
+    "staking",
     "clarity",
-    "renvault"
+    "renvault",
+    "typescript",
+    "sdk"
   ],
   "author": "RenVault Team",
   "license": "MIT",
@@ -24,5 +41,21 @@
     "type": "git",
     "url": "https://github.com/sanmipaul/renvault-staking.git"
   },
-  "homepage": "https://github.com/sanmipaul/renvault-staking#readme"
+  "homepage": "https://github.com/sanmipaul/renvault-staking#readme",
+  "bugs": {
+    "url": "https://github.com/sanmipaul/renvault-staking/issues"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "express": "^4.18.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.0.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0",
+    "vitest": "^1.4.0"
+  }
 }
