@@ -25,6 +25,7 @@
     "test:coverage": "vitest run --coverage",
     "prepublishOnly": "npm run typecheck && npm run test && npm run build"
   },
+  "sideEffects": false,
   "keywords": [
     "stacks",
     "bitcoin",
@@ -33,7 +34,9 @@
     "clarity",
     "renvault",
     "typescript",
-    "sdk"
+    "sdk",
+    "rewards",
+    "yield"
   ],
   "author": "RenVault Team",
   "license": "MIT",
